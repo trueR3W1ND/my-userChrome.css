@@ -1,0 +1,210 @@
+/#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar {
+/  opacity: 0;
+/  pointer-events: none;
+/}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+@-moz-document url(about:blank) {
+    html,body { background: black; }
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+/* Remove border under navbar */
+#navigator-toolbox::after {
+  border-bottom: 0px !important;
+  }
+/* end of random stuff */
+#urlbar-background,
+#urlbar-container,
+.urlbar-input-box {
+border: none !important;
+}
+#urlbar #urlbar-background{
+    background-color: var(--toolbar-bgcolor, currentColor) !important;
+    border: none !important;
+}
+/* moving bookmarks pannel on botomm */
+#PersonalToolbar {
+    bottom:0;
+    position:fixed;
+    bottom: 0 !important; 
+    display: flex;
+    width:100%;
+}
+ 
+/* bookmarks text size */
+#personal-bookmarks {
+    height:24px !important;
+}
+
+#nav-bar {
+    border-color: transparent !important;
+    border-width: 0px !important;
+ }
+/* делаем отступ области просмотра страницы от низа окна, на +/- высоту панели закладок */
+#main-window:not([inFullscreen="true"]) > body::after{
+  display: -moz-box;
+  content: "";
+  height: 25px;
+  border-top: solid 0px #505050;
+}
+}
+
+
+/* #FFFFFF Move address bar to titlebar with tabs up,right,down,left*/
+ #nav-bar {
+    margin:         -38px 80px -1px 0px !important;
+    height:         37px !important;
+    border-bottom:  none !important;
+/    background: #FFFFFF !important;
+}
+/* URL bar width adjustments */
+#urlbar-container {
+border: none !important;
+}
+#urlbar {
+    border:         none !important;
+margin-left:    -2px !important;
+}
+#searchbar-container {
+border: none !important;
+}
+/*position window controls*/
+.titlebar-min {
+padding: 0px  !important;
+	padding-left:  4px !important;
+	padding-right: 3px !important;
+	margin-left: 1px !important;
+	margin-right: 1px !important;
+	margin-top: -5px  !important;
+	margin-bottom: 1px  !important;
+}
+.titlebar-restore {
+padding: 0px  !important;
+	padding-left:  4px !important;
+	padding-right: 3px !important;
+	margin-left: 1px !important;
+	margin-right: 1px !important;
+	margin-top: -5px  !important;
+	margin-bottom: 1px  !important;
+}
+.titlebar-close {
+padding: 0px  !important;
+	padding-left:  4px !important;
+	padding-right: 3px !important;
+	margin-left: 1px !important;
+	margin-right: 5px !important;
+	margin-top: -5px  !important;
+	margin-bottom: 1px  !important;
+}
+
+
+/*выпадающее меню*/
+
+
+/* Constrain drop-down width */
+
+
+}
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+	padding-right: 0px !important;
+
+}
+
+/* Constrains urlbar popup to urlbar width */
+/* Firefox 70+ */
+
+#urlbar-container {
+	transform: translateY(0);
+	position: relative;
+	z-index: 10;
+	padding-block: 3px !important;
+	padding-inline: 0px !important;
+	margin-inline: 5px !important;
+}
+
+#nav-bar-customization-target {
+	overflow: visible !important;
+}
+
+
+
+
+#urlbar[open] {
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}
+
+.urlbarView-row {
+	padding: 6px 0px !important;
+}
+#urlbar-results>.autocomplete-richlistbox{
+  --item-padding-start: 0px !important;
+  --item-padding-end: 0px !important;
+.urlbarView:not(.megabar){
+    left: unset !important;
+    right: unset !important;
+  }
+}
+/*интервал между строчками*/
+panel#urlbar-results .autocomplete-richlistitem {
+     min-height: 24px !important;
+}
+/*скругление*/
+#urlbar,#searchbar, .searchbar-textbox {
+border:none !important;
+border-radius: 50px !important;
+}
+
+
+#urlbar-results .search-one-offs,
+#PopupSearchAutoComplete #searchbar-anon-search-settings-compact,
+#PopupSearchAutoComplete .search-panel-current-engine,
+#PopupSearchAutoComplete .search-panel-current-input,
+#PopupSearchAutoComplete .search-panel-one-offs .dummy {
+	display: none !important;	
+}
+
+/* hide native tabs and sidebar header */
+#TabsToolbar-customization-target {
+  visibility: collapse;
+}
+
+#navigator-toolbox[inFullscreen="true"] #titlebar {
+  visibility: collapse;
+}
+
+#sidebar-header {
+  visibility: collapse;
+}
+
+/* realign elements */
+#nav-bar {
+  margin-top: calc(-1 * var(--tab-min-height));
+  margin-right: 144px;
+  box-shadow: none !important;
+}
+
+#nav-bar[inFullscreen="true"] {
+  margin-top: unset;
+  margin-right: unset;
+}
+
+.titlebar-buttonbox-container {
+  min-height: var(--tab-min-height);
+}
+  #PopupAutoCompleteRichResult richlistitem:first-of-type[actiontype="visiturl"] +
+  richlistitem[actiontype="searchengine"] {
+    display:none !important;
+/* recolor elements and enable window dragging */
+#navigator-toolbox {
+  background-color: var(--toolbar-bgcolor);
+  background-image: var(--toolbar-bgimage);
+  background-clip: padding-box;
+  color: var(--toolbar-color);
+  
+  -moz-window-dragging: drag;
+}
+/* realign elements end*/
